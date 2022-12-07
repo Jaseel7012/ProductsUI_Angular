@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsAddComponent } from './products-add/products-add.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { NavbarComponent } from './navbar/navbar.component';
 const myroute:Routes=[
   {
     path:"",
@@ -20,7 +21,8 @@ const myroute:Routes=[
   declarations: [
     AppComponent,
     ProductsAddComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
