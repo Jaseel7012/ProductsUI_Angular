@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiProductService } from '../api-product.service';
 
 @Component({
   selector: 'app-products-add',
@@ -14,6 +15,8 @@ export class ProductsAddComponent {
   prices=""
   brand=""
   productCode=""
+  constructor(private  api:ApiProductService){}
+
   read=()=>{
     let data={
       "productCode":this.productCode,
@@ -25,6 +28,11 @@ export class ProductsAddComponent {
       "name":this.name,
       "prices":this.prices,
     }
+    this.api.adddata(data).subscribe(
+      (response)=>{
+        console.log(response)
+      }
+    )
     console.log(data)
   }
 
